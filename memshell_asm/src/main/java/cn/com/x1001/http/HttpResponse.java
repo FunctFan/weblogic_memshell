@@ -2,8 +2,6 @@ package cn.com.x1001.http;
 
 import cn.com.x1001.utils.Reflection;
 
-import java.io.PrintWriter;
-
 public class HttpResponse {
     private Object response;
     protected static final Class[] EMPTY_CLASS = new Class[]{};
@@ -36,5 +34,6 @@ public class HttpResponse {
         Reflection.invokeMethod(writer, "print", new Class[]{String.class}, value);
         Reflection.invokeMethod(writer, "flush", new Class[]{String.class});
         Reflection.invokeMethod(response, "send", EMPTY_CLASS);
+
     }
 }

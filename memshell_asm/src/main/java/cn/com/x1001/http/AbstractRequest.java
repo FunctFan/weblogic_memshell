@@ -1,7 +1,5 @@
 package cn.com.x1001.http;
 
-import sun.reflect.Reflection;
-
 import java.util.UUID;
 
 /**
@@ -83,6 +81,10 @@ public abstract class AbstractRequest {
      * 获取指定key的对应的header值
      */
     public abstract String getHeader(String key);
+    /**
+     * 获取method值
+     */
+    public abstract String getMethod();
 
 
 }
